@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dealers",
+  "info": {
+    "singularName": "dealer",
+    "pluralName": "dealers",
+    "displayName": "Dealer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "carsCount": {
+      "type": "integer"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "city": {
+      "type": "enumeration",
+      "enum": [
+        "غازي عنتاب",
+        "اسطنبول ",
+        "انقرة",
+        "مرسين",
+        "بورصة"
+      ]
+    },
+    "region": {
+      "type": "string"
+    },
+    "dealerType": {
+      "type": "enumeration",
+      "enum": [
+        "معرض معتمد(وكيل)",
+        "معرض سيارات مستعملة",
+        "أفراد (معلنون عاديون)"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "cars": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::car.car",
+      "mappedBy": "dealer"
+    }
+  }
+}

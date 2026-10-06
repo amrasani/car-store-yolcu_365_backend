@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featured_cars",
+  "info": {
+    "singularName": "featured-car",
+    "pluralName": "featured-cars",
+    "displayName": "featured-car"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "sedan",
+        "hatchback",
+        "suv",
+        "station_wagon"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "mileage": {
+      "type": "integer"
+    },
+    "fuel_type": {
+      "type": "enumeration",
+      "enum": [
+        "diesel",
+        "gasoline",
+        "hybrid",
+        "electric",
+        "Petrol"
+      ]
+    },
+    "year": {
+      "type": "integer"
+    },
+    "transmission": {
+      "type": "enumeration",
+      "enum": [
+        "automatic",
+        "manual"
+      ]
+    },
+    "galary": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Brand": {
+      "type": "enumeration",
+      "enum": [
+        "Kia",
+        "Toyota",
+        "Mercedes-Benz",
+        "Peugeot"
+      ]
+    },
+    "model": {
+      "type": "string"
+    },
+    "drive_type": {
+      "type": "enumeration",
+      "enum": [
+        "AWD",
+        "FWD",
+        "RWD"
+      ]
+    },
+    "doors": {
+      "type": "integer"
+    },
+    "cylinders": {
+      "type": "integer"
+    },
+    "color": {
+      "type": "string"
+    },
+    "specs_list": {
+      "type": "component",
+      "component": "car-details.car-detail-field",
+      "repeatable": true
+    },
+    "desc": {
+      "type": "blocks"
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "count": {
+      "type": "integer"
+    }
+  }
+}

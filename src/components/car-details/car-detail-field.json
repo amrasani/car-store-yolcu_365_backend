@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_car_details_car_detail_fields",
+  "info": {
+    "displayName": "CarDetailField"
+  },
+  "options": {},
+  "attributes": {
+    "lable": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "icon_class": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
