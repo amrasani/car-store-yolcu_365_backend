@@ -2,15 +2,14 @@ module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
   app: {
-    keys: env.array('APP_KEYS'),
+    keys: env.array('APP_KEYS', ['key1', 'key2']),
   },
   webhooks: {
-    populateRelations: env.boolean('WEBHOOKS_POPULATE_RELATIONS', false),
+    populateRelations: env('WEBHOOKS_POPULATE_RELATIONS', false),
   },
-  // 👈 هذا هو الجزء المطلوب لتفعيل استقبال النقل
   transfer: {
     token: {
-      salt: env('TRANSFER_TOKEN_SALT'),
+      salt: env('TRANSFER_TOKEN_SALT', 'my_secure_transfer_salt_2026'),
     },
   },
 });
