@@ -1,4 +1,4 @@
-module.exports = ({ env }) => ({
+export default ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
   app: {
@@ -10,6 +10,14 @@ module.exports = ({ env }) => ({
   transfer: {
     token: {
       salt: env('TRANSFER_TOKEN_SALT', 'my_secure_transfer_salt_2026'),
+    },
+  },
+  admin: {
+    auth: {
+      secret: env('ADMIN_JWT_SECRET'),
+    },
+    transfer: {
+      enabled: true,
     },
   },
 });
