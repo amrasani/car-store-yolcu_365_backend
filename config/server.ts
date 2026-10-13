@@ -9,7 +9,7 @@ export default ({ env }) => ({
   },
   transfer: {
     token: {
-      salt: env('TRANSFER_TOKEN_SALT', 'my_secure_transfer_salt_2026'),
+      salt: env('TRANSFER_TOKEN_SALT', '04ijdu2k4/mJwDI/2kjNYQ=='),
     },
   },
   admin: {
